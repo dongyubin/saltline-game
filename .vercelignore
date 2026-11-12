@@ -1,0 +1,4 @@
+_base
+node_modules
+*.log
+.vercel

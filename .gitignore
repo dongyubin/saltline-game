@@ -1,0 +1,17 @@
+# dependencies
+node_modules/
+
+# vercel
+.vercel/
+
+# logs
+*.log
+
+# os / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# upstream template reference (not part of the deployed site)
+_base/
