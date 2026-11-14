@@ -32,7 +32,7 @@
       }
     });
   }, { rootMargin: "-40% 0px -55% 0px" });
-  ["play", "how", "about", "press", "faq"].forEach(function (id) { var el = document.getElementById(id); if (el) spy.observe(el); });
+  ["play", "how", "guide", "fieldguide", "help", "faq"].forEach(function (id) { var el = document.getElementById(id); if (el) spy.observe(el); });
 
   /* reveal on scroll */
   var reveal = new IntersectionObserver(function (entries) {

@@ -219,6 +219,127 @@ h1,h2,h3,.display{font-family:var(--font-display);letter-spacing:.01em}
 .obj.acid .n{background:var(--acid)} .obj.magenta .n{background:var(--magenta)} .obj.cyan .n{background:var(--cyan)} .obj.red .n{background:var(--red)}
 .obj b{color:var(--paper)}
 
+/* ---------- controls grid ---------- */
+.controls-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.ctrl-card{background:linear-gradient(180deg,var(--ink-3),var(--ink-2));border:1px solid var(--line);
+  border-radius:var(--radius);padding:1.5rem;position:relative;overflow:hidden}
+.ctrl-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad-brand);opacity:.7}
+.ctrl-head{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}
+.ctrl-ico{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-size:1.15rem;
+  background:rgba(18,230,196,.1);border:1px solid var(--line-strong)}
+.ctrl-head h3{font-size:1.08rem}
+.ctrl-sub{color:var(--muted);font-size:.85rem;margin-bottom:1rem}
+.ctrl-card .keycluster{margin:0 auto 1.1rem}
+.binds{display:grid;gap:.1rem}
+.binds>div{display:flex;align-items:baseline;justify-content:space-between;gap:.8rem;
+  padding:.5rem 0;border-bottom:1px dashed var(--line)}
+.binds>div:last-child{border-bottom:0}
+.binds dt{color:var(--muted);font-size:.84rem}
+.binds dd{color:var(--paper);font-size:.84rem;text-align:right}
+.binds dd b{font-family:var(--font-mono);font-weight:600;color:var(--teal)}
+.ctrl-fallback{margin-top:1.4rem;color:var(--muted);font-size:.9rem;background:var(--ink-2);
+  border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:10px;padding:1rem 1.2rem}
+.ctrl-fallback b{color:var(--paper);font-family:var(--font-mono);font-weight:600}
+
+/* ---------- mission briefing + steps ---------- */
+.briefing{position:relative;background:var(--ink-2);border:1px solid var(--line-strong);border-radius:var(--radius);
+  padding:1.4rem 1.6rem;margin-bottom:1.8rem}
+.briefing-tag{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--acid)}
+.briefing p{font-family:var(--font-mono);color:var(--paper);font-size:1rem;margin-top:.5rem;line-height:1.6}
+.steps{display:grid;gap:1rem;margin-bottom:1.8rem}
+.step{display:flex;gap:1.1rem;align-items:flex-start;background:var(--ink-2);border:1px solid var(--line);
+  border-radius:var(--radius);padding:1.4rem 1.6rem;transition:border-color .25s,transform .25s}
+.step:hover{border-color:var(--line-strong);transform:translateX(4px)}
+.step-n{flex:0 0 38px;height:38px;border-radius:11px;display:grid;place-items:center;
+  font-family:var(--font-display);font-weight:700;font-size:1.1rem;color:#041018}
+.step-n.acid{background:var(--acid)} .step-n.magenta{background:var(--magenta)}
+.step-n.red{background:var(--red)} .step-n.cyan{background:var(--cyan)}
+.step-body h3{font-size:1.15rem;margin-bottom:.35rem}
+.step-body p{color:var(--muted);font-size:.93rem}
+.step-body b{color:var(--paper);font-family:var(--font-mono);font-weight:600}
+
+/* ---------- wave table ---------- */
+.wave-panel{background:linear-gradient(180deg,var(--ink-3),var(--ink-2));border:1px solid var(--line);
+  border-radius:var(--radius);padding:1.6rem;overflow:hidden}
+.wave-head{margin-bottom:1.1rem}
+.wave-head h3{font-size:1.2rem;margin-bottom:.3rem}
+.wave-head p{color:var(--muted);font-size:.9rem}
+.wave-table{display:grid;gap:.2rem}
+.wave-row{display:grid;grid-template-columns:1.7fr 1fr 1fr 1.5fr;align-items:center;gap:.6rem;
+  padding:.7rem .8rem;border-radius:9px;background:rgba(7,13,24,.4)}
+.wave-row.wave-h{background:none;font-family:var(--font-mono);font-size:.68rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--dim);padding-bottom:.3rem}
+.wave-row span:first-child{color:var(--paper);font-size:.9rem;font-weight:500}
+.w-gull,.w-hound{font-family:var(--font-display);font-weight:700;font-size:1.25rem;text-align:center}
+.w-gull{color:var(--cyan)} .w-hound{color:var(--magenta)}
+.w-bar{display:block;height:8px;border-radius:6px;background:var(--ink-4);overflow:hidden}
+.w-bar i{display:block;height:100%;background:var(--grad-brand);border-radius:6px}
+.wave-note{color:var(--muted);font-size:.86rem;margin-top:1rem}
+
+/* ---------- enemies + weapon ---------- */
+.enemy-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:1.4rem}
+.enemy-card{background:var(--ink-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.6rem;position:relative;overflow:hidden;transition:transform .25s,border-color .25s}
+.enemy-card:hover{transform:translateY(-4px);border-color:var(--line-strong)}
+.enemy-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px}
+.enemy-card.gull::before{background:linear-gradient(90deg,var(--cyan),transparent)}
+.enemy-card.hound::before{background:linear-gradient(90deg,var(--magenta),transparent)}
+.enemy-top{display:flex;align-items:center;gap:.9rem;margin-bottom:.9rem}
+.enemy-ico{width:52px;height:52px;border-radius:13px;display:grid;place-items:center;font-size:1.6rem;
+  background:var(--ink-4);border:1px solid var(--line-strong)}
+.enemy-top h3{font-size:1.3rem;line-height:1.1}
+.enemy-role{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.enemy-card>p{color:var(--muted);font-size:.92rem;margin-bottom:.9rem}
+.enemy-list{list-style:none;display:grid;gap:.55rem}
+.enemy-list li{position:relative;padding-left:1.2rem;color:var(--muted);font-size:.9rem}
+.enemy-list li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:2px;
+  background:var(--teal);transform:rotate(45deg)}
+.enemy-list b{color:var(--paper)}
+.weapon-panel{display:grid;grid-template-columns:.9fr 1.4fr;gap:0;border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;background:var(--ink-2)}
+.weapon-stats{padding:1.8rem;background:linear-gradient(160deg,var(--ink-3),var(--ink-2));border-right:1px solid var(--line)}
+.weapon-stats h3,.weapon-tips h3{font-size:1.15rem;margin-bottom:1rem}
+.wstat{display:flex;align-items:baseline;gap:.7rem;padding:.55rem 0;border-bottom:1px dashed var(--line)}
+.wstat:last-child{border-bottom:0}
+.wstat b{font-family:var(--font-display);font-weight:700;font-size:1.5rem;color:var(--teal);min-width:3.2ch}
+.wstat span{color:var(--muted);font-size:.86rem}
+.weapon-tips{padding:1.8rem}
+
+/* ---------- ratings ---------- */
+.rating-ladder{display:flex;align-items:flex-end;gap:.6rem;margin-bottom:1.8rem;height:150px}
+.rung{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:.5rem;height:100%}
+.rung::before{content:"";width:100%;border-radius:8px 8px 0 0;background:var(--ink-4)}
+.rung span{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.rung.r0::before{height:26%;background:#3a4a5e}
+.rung.r1::before{height:40%;background:#5a6b7e}
+.rung.r2::before{height:54%;background:var(--teal-deep)}
+.rung.r3::before{height:68%;background:var(--teal)}
+.rung.r4::before{height:84%;background:var(--cyan)}
+.rung.r5::before{height:100%;background:var(--grad-brand);box-shadow:0 0 24px rgba(166,247,80,.35)}
+.rung.r5 span{color:var(--acid);font-weight:600}
+.rating-cards{margin-bottom:1.2rem}
+.rating-note{color:var(--muted);font-size:.92rem;max-width:70ch}
+.rating-note b{color:var(--acid);font-family:var(--font-display)}
+
+/* ---------- help + requirements ---------- */
+.help-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:1.4rem}
+.help-card{background:var(--ink-2);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;
+  border-left:3px solid var(--amber);transition:border-color .25s}
+.help-card:hover{border-color:var(--line-strong);border-left-color:var(--amber)}
+.help-card h3{font-size:1.08rem;margin-bottom:.5rem}
+.help-card p{color:var(--muted);font-size:.9rem}
+.help-card b{color:var(--paper);font-family:var(--font-mono);font-weight:600}
+.req-panel{display:grid;grid-template-columns:1fr 1.3fr;gap:0;border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;background:var(--ink-2)}
+.req-col{padding:1.8rem}
+.req-col:first-child{border-right:1px solid var(--line);background:linear-gradient(160deg,var(--ink-3),var(--ink-2))}
+.req-col h3{font-size:1.1rem;margin-bottom:1rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{font-family:var(--font-mono);font-size:.74rem;color:var(--teal);border:1px solid var(--line-strong);
+  border-radius:999px;padding:.35rem .85rem;background:rgba(18,230,196,.05)}
+.disambig{font-size:.85rem;color:var(--dim);border-top:1px dashed var(--line);padding-top:.8rem}
+.disambig b{color:var(--muted)}
+
 /* ---------- coverage ---------- */
 .press{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
 .press a{background:var(--ink-2);border:1px solid var(--line);border-radius:12px;padding:1.2rem;display:flex;flex-direction:column;gap:.4rem;transition:border-color .2s,transform .2s}
@@ -273,4 +394,27 @@ footer{border-top:1px solid var(--line);padding:2.6rem 0;background:var(--ink-2)
   .press{grid-template-columns:1fr}
   .section{padding:64px 0}
   .stage{aspect-ratio:4/3;min-height:280px}
+}
+
+/* new sections — responsive */
+@media(max-width:960px){
+  .controls-grid{grid-template-columns:1fr}
+  .weapon-panel,.req-panel{grid-template-columns:1fr}
+  .weapon-stats{border-right:0;border-bottom:1px solid var(--line)}
+  .req-col:first-child{border-right:0;border-bottom:1px solid var(--line)}
+}
+@media(max-width:760px){
+  .enemy-grid,.help-grid{grid-template-columns:1fr}
+  .wave-row{grid-template-columns:1.4fr .8fr .8fr 1fr;gap:.4rem;padding:.6rem}
+  .wave-row span:first-child{font-size:.82rem}
+  .w-gull,.w-hound{font-size:1.05rem}
+}
+@media(max-width:560px){
+  .rating-ladder{height:120px;gap:.35rem}
+  .rung span{font-size:.6rem}
+  .step{padding:1.1rem 1.2rem;gap:.85rem}
+  .step-n{flex-basis:32px;height:32px;font-size:1rem}
+  .briefing p{font-size:.9rem}
+  .wave-row.wave-h{font-size:.58rem;letter-spacing:.06em}
+  .wave-panel,.weapon-stats,.weapon-tips,.req-col{padding:1.3rem}
 }

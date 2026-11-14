@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Saltline — Play the AI-Built Browser FPS Free, No Download</title>
-<meta name="description" content="Play Saltline, the first-person shooter built in ~8 hours by Claude Fable 5.2 from a single prompt. Runs in your browser, no download, one 1.4 MB HTML file. Controls, objectives and the story behind it.">
+<meta name="description" content="Play Saltline, the first-person shooter built in ~8 hours by Claude Fable 5.2 from a single prompt. Runs in your browser, no download. Full controls, mission walkthrough, enemies, ratings and fixes.">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#070d18">
 <link rel="canonical" href="https://saltline-game.wwkejishe.top/" id="canonical">
@@ -35,6 +35,7 @@
   "gamePlatform":["Web browser"],
   "applicationCategory":"Game",
   "operatingSystem":"Any (modern browser)",
+  "playMode":"SinglePlayer",
   "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
   "author":{"@type":"Person","name":"Felix Rieseberg"},
   "publisher":{"@type":"Organization","name":"Anthropic"},
@@ -47,11 +48,17 @@
   "@context":"https://schema.org",
   "@type":"FAQPage",
   "mainEntity":[
-    {"@type":"Question","name":"What is Saltline?","acceptedAnswer":{"@type":"Answer","text":"Saltline is a playable first-person shooter that runs entirely in a web browser. It was generated from a single prompt by Anthropic's Claude Fable 5.2 model in about eight hours, with all 3D models, textures and sound produced in code."}},
-    {"@type":"Question","name":"Is Saltline free and do I need to download it?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is free and needs no download or install. The whole game is a single HTML file of roughly 1.4 MB that you can play directly in a modern desktop browser."}},
-    {"@type":"Question","name":"How do I play Saltline?","acceptedAnswer":{"@type":"Answer","text":"Click the stage to capture your mouse. Move with WASD, look with the mouse, left-click to fire, R to reload, E to interact and cut relays, Shift to sprint, Space to jump, Esc to pause. Cut three uplink relays, survive the Gulls and Hounds, then reach the escape boat."}},
-    {"@type":"Question","name":"Who made Saltline?","acceptedAnswer":{"@type":"Answer","text":"The run was set up by Felix Rieseberg, an engineer at Anthropic, and shared on X on 2026-11-09. This page hosts a community mirror so the game can be played locally; all credit for the game goes to its original author."}},
-    {"@type":"Question","name":"Can I play Saltline on mobile or if claude.ai is blocked?","acceptedAnswer":{"@type":"Answer","text":"The game is designed for desktop with mouse and keyboard. Because it is self-contained web code, mirrors like this one let you play even where claude.ai is blocked. Touch controls are limited, so a desktop browser gives the best experience."}}
+    {"@type":"Question","name":"What is Saltline?","acceptedAnswer":{"@type":"Answer","text":"Saltline is a playable first-person shooter that runs entirely in a web browser. It was generated from a single prompt by Anthropic's Claude Fable 5.2 model in about eight hours, with all 3D models, textures and sound produced in code. You play a lone breacher cutting three uplink relays in a rainy container port."}},
+    {"@type":"Question","name":"Is Saltline free and do I need to download it?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is free and needs no download or install. The whole game is a single HTML file of roughly 1.4 MB that you can play directly in a modern browser. Every surface, machine and sound is generated in your browser at load time."}},
+    {"@type":"Question","name":"How do I play Saltline?","acceptedAnswer":{"@type":"Answer","text":"Click the stage to capture your mouse. Move with WASD, look with the mouse, left-click to fire, right-click to aim, R to reload, F for melee, Shift to sprint, Space to jump, C to crouch and Esc to pause. Hold E at a relay to cut it. Cut all three uplinks, then reach the escape boat at the quay ladder."}},
+    {"@type":"Question","name":"Can I play Saltline on a phone or tablet?","acceptedAnswer":{"@type":"Answer","text":"Yes. Saltline has full on-screen touch controls: your left thumb moves, dragging the right side looks, and Fire, Aim, Reload and Jump are on-screen buttons. Hold USE at a relay to cut it, and push the move stick fully forward to sprint. A desktop with mouse and keyboard still gives the most precise aim."}},
+    {"@type":"Question","name":"Does Saltline support a controller?","acceptedAnswer":{"@type":"Answer","text":"Yes. With a gamepad the sticks move and look, RT fires, LT aims, A jumps, B crouches, X reloads, Y cuts a relay, L3 sprints and Start pauses. Connect the pad before loading and press a button so the browser detects it."}},
+    {"@type":"Question","name":"How long does a run take and where are the relays?","acceptedAnswer":{"@type":"Answer","text":"A clean run takes roughly four to seven minutes. The three uplink relays are in the yard, the shed and the quay; the compass and on-screen markers point to each one with a distance readout. After all three are cut, the escape boat holds at the quay ladder on the south end."}},
+    {"@type":"Question","name":"What are Gulls and Hounds?","acceptedAnswer":{"@type":"Answer","text":"They are the port's two machine enemies. Gulls are flying drones that attack from range with energy bolts; Hounds are four-legged robot dogs that rush you at ground level. Both have weak points that take extra damage, and both hunt by line of sight and by the noise of your gunfire."}},
+    {"@type":"Question","name":"How do I get the best rating?","acceptedAnswer":{"@type":"Answer","text":"The debrief grades you from Messy up to Surgical. Your rating combines speed (finishing under about 4.5 minutes scores best), accuracy (50% or higher is ideal) and finishing without retries. Move decisively, aim for weak points, and avoid dying to reach Surgical."}},
+    {"@type":"Question","name":"Why is Saltline stuck on Loading, or stuttering?","acceptedAnswer":{"@type":"Answer","text":"The game builds its world in your browser, so the first load can take several seconds on slower devices. If it stalls on a boot step such as Waiting for first light, your GPU may be struggling to compile shaders. Open Settings and lower Graphics quality, or try a recent Chrome, Edge or Firefox with hardware acceleration enabled."}},
+    {"@type":"Question","name":"Who made Saltline, and is this the official site?","acceptedAnswer":{"@type":"Answer","text":"The run was set up by Felix Rieseberg, an engineer at Anthropic, and shared on X on 2026-11-09. This page is a community mirror so the game can be played locally; it is not affiliated with or endorsed by Anthropic, and all credit for the game goes to its original author."}},
+    {"@type":"Question","name":"Is this the Saltline mobile game on Google Play?","acceptedAnswer":{"@type":"Answer","text":"No. This is the AI-generated browser FPS by Claude Fable 5.2. It is unrelated to the separate Saltline lowcountry app on Google Play, which is a different product by a different developer."}}
   ]
 }
 </script>
@@ -66,9 +73,10 @@
     <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">☰</button>
     <div class="nav-links" id="navLinks">
       <a href="#play" data-spy>Play</a>
-      <a href="#how" data-spy>How to play</a>
-      <a href="#about" data-spy>What is it</a>
-      <a href="#press" data-spy>Coverage</a>
+      <a href="#how" data-spy>Controls</a>
+      <a href="#guide" data-spy>Mission guide</a>
+      <a href="#fieldguide" data-spy>Enemies</a>
+      <a href="#help" data-spy>Help</a>
       <a href="#faq" data-spy>FAQ</a>
     </div>
     <a class="btn btn-primary btn-sm nav-cta" href="#play">Play now</a>
@@ -90,9 +98,9 @@
       </div>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#play" id="heroPlay">▶ Play now</a>
-        <a class="btn btn-ghost" href="#how">Learn the controls</a>
+        <a class="btn btn-ghost" href="#guide">Read the mission guide</a>
       </div>
-      <p class="hero-note">Best on desktop with mouse + keyboard. Click the stage to capture your mouse; Esc releases it.</p>
+      <p class="hero-note">Best on desktop with mouse + keyboard, but touch and gamepad work too. Click the stage to capture your mouse; Esc releases it.</p>
     </div>
 
     <div class="stage" id="play">
@@ -133,48 +141,195 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">How to play</span>
-      <h2>Controls &amp; objectives</h2>
-      <p>Click the stage above to capture your mouse. These are the game's actual bindings.</p>
+      <h2>Controls for every input</h2>
+      <p>Click the stage above to capture your mouse. These are the game's actual bindings — keyboard &amp; mouse, touch and gamepad are all supported.</p>
     </div>
 
-    <div class="showcase-row reveal">
-      <div class="showcase-body">
-        <h3>Move &amp; fight</h3>
-        <div class="keys">
-          <div class="keycluster" aria-hidden="true">
-            <span class="key blank"></span><span class="key w">W</span><span class="key blank"></span>
-            <span class="key">A</span><span class="key">S</span><span class="key">D</span>
-          </div>
-          <div class="keylist">
-            <span><b>Mouse</b> look · <b>Left-click</b> fire</span>
-            <span><b>R</b> reload · <b>F</b> melee</span>
-            <span><b>Shift</b> sprint · <b>Space</b> jump · <b>C</b> crouch</span>
-            <span><b>E</b> interact · <b>Esc</b> pause</span>
-          </div>
+    <div class="controls-grid reveal">
+      <div class="ctrl-card">
+        <div class="ctrl-head"><span class="ctrl-ico">⌨</span><h3>Keyboard &amp; mouse</h3></div>
+        <div class="keycluster" aria-hidden="true">
+          <span class="key blank"></span><span class="key w">W</span><span class="key blank"></span>
+          <span class="key">A</span><span class="key">S</span><span class="key">D</span>
         </div>
-        <p>Arrow keys also turn and aim. Sound starts on your first click; the game pauses when the tab is hidden.</p>
+        <dl class="binds">
+          <div><dt>Look</dt><dd>Mouse</dd></div>
+          <div><dt>Fire / Aim</dt><dd><b>LMB</b> / <b>RMB</b></dd></div>
+          <div><dt>Reload / Melee</dt><dd><b>R</b> / <b>F</b></dd></div>
+          <div><dt>Cut relay</dt><dd>Hold <b>E</b></dd></div>
+          <div><dt>Sprint / Jump</dt><dd><b>Shift</b> / <b>Space</b></dd></div>
+          <div><dt>Crouch</dt><dd><b>C</b> or <b>Ctrl</b></dd></div>
+          <div><dt>Pause</dt><dd><b>Esc</b> or <b>P</b></dd></div>
+        </dl>
       </div>
-      <div class="showcase-media">
-        <img src="assets/poster.webp" alt="Rainy container port from Saltline with neon crane lights">
-        <div class="tint"></div>
+
+      <div class="ctrl-card">
+        <div class="ctrl-head"><span class="ctrl-ico">📱</span><h3>Touch</h3></div>
+        <p class="ctrl-sub">Full on-screen controls on phones and tablets.</p>
+        <dl class="binds">
+          <div><dt>Move</dt><dd>Left thumb, anywhere</dd></div>
+          <div><dt>Look</dt><dd>Drag the right side</dd></div>
+          <div><dt>Fire</dt><dd>Hold <b>FIRE</b>, drag to track</dd></div>
+          <div><dt>Aim</dt><dd><b>AIM</b> toggles</dd></div>
+          <div><dt>Reload / Jump</dt><dd><b>RLD</b> / <b>JUMP</b></dd></div>
+          <div><dt>Cut relay</dt><dd>Hold <b>USE</b> at a relay</dd></div>
+          <div><dt>Sprint</dt><dd>Push stick fully forward</dd></div>
+        </dl>
+      </div>
+
+      <div class="ctrl-card">
+        <div class="ctrl-head"><span class="ctrl-ico">🎮</span><h3>Gamepad</h3></div>
+        <p class="ctrl-sub">Connect a pad and press a button to detect it.</p>
+        <dl class="binds">
+          <div><dt>Move / Look</dt><dd>Left / right stick</dd></div>
+          <div><dt>Fire / Aim</dt><dd><b>RT</b> / <b>LT</b></dd></div>
+          <div><dt>Reload</dt><dd><b>X</b></dd></div>
+          <div><dt>Cut relay</dt><dd><b>Y</b></dd></div>
+          <div><dt>Jump / Crouch</dt><dd><b>A</b> / <b>B</b></dd></div>
+          <div><dt>Sprint</dt><dd><b>L3</b> (click stick)</dd></div>
+          <div><dt>Pause</dt><dd><b>Start</b></dd></div>
+        </dl>
       </div>
     </div>
 
-    <div class="showcase-row rev reveal">
-      <div class="showcase-media">
-        <img src="assets/poster.webp" alt="Saltline mission environment with drones and robot dogs">
-        <div class="tint"></div>
+    <p class="ctrl-fallback reveal"><b>Mouse won't capture?</b> Hold a mouse button and drag to look (left also fires, right also aims). Arrow keys or <b>I J K L</b> turn, and <b>Enter</b> fires. Sound starts on your first click, and the game pauses automatically when the tab is hidden.</p>
+  </div>
+</section>
+
+<section class="section" id="guide">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Mission guide</span>
+      <h2>Cut the three uplinks, reach the boat</h2>
+      <p>You are a lone breacher from the Port Authority Breach Unit, dropped into Berth 4 at 05:42. The port's security net — the Harbormaster — has gone feral. Here is the whole operation, step by step.</p>
+    </div>
+
+    <div class="briefing reveal">
+      <span class="briefing-tag">Control · radio</span>
+      <p>"Breacher, this is Control. The Harbormaster holds the berth. Cut its three uplinks — yard, shed, quay."</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <span class="step-n acid">1</span>
+        <div class="step-body">
+          <h3>Cut the yard relay</h3>
+          <p>Follow the compass marker to the first beacon in the open yard. Stand close, face it, and <b>hold E</b> for about 2.4 seconds until the ring fills. Cutting it wakes the net — the first wave spawns: <b>3 Gulls and 1 Hound</b>.</p>
+        </div>
       </div>
-      <div class="showcase-body">
-        <h3>The mission</h3>
-        <div class="objectives">
-          <div class="obj acid"><span class="n">1</span><span><b>Cut three uplink relays.</b> Find each beacon and press <b>E</b> to interact while under fire.</span></div>
-          <div class="obj magenta"><span class="n">2</span><span><b>Survive the Gulls.</b> Flying drones hunt you across the open yard.</span></div>
-          <div class="obj red"><span class="n">3</span><span><b>Watch for Hounds.</b> Robot dogs close in fast at ground level.</span></div>
-          <div class="obj cyan"><span class="n">4</span><span><b>Reach the escape boat.</b> Once the relays are down, exfiltrate to finish the run.</span></div>
+      <div class="step reveal">
+        <span class="step-n magenta">2</span>
+        <div class="step-body">
+          <h3>Cut the shed relay</h3>
+          <p>Push to the shed for the second uplink. Use the steel walls as cover while you hold <b>E</b>. The Harbormaster answers with a heavier wave: <b>3 Gulls and 2 Hounds</b>. "Two dark. It is throwing everything it has left at you."</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <span class="step-n red">3</span>
+        <div class="step-body">
+          <h3>Cut the quay relay</h3>
+          <p>The last relay sits on the quay. Expect the biggest push yet — <b>4 Gulls and 3 Hounds</b>, with up to nine machines alive at once. Thin them out before you commit to the cut, because moving cancels your progress.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <span class="step-n cyan">4</span>
+        <div class="step-body">
+          <h3>Reach the escape boat</h3>
+          <p>With all three dark, Control calls it: "The boat is holding at the quay ladder, south end. Run." Head for the <b>EX</b> marker. The boat will not wait under fire while relays are still live, so cut all three first, then exfiltrate to finish the run.</p>
         </div>
       </div>
     </div>
+
+    <div class="wave-panel reveal">
+      <div class="wave-head">
+        <h3>How the waves escalate</h3>
+        <p>Each relay you cut triggers a stronger response. Plan your ammo and cover around it.</p>
+      </div>
+      <div class="wave-table" role="table" aria-label="Enemy waves per relay">
+        <div class="wave-row wave-h" role="row"><span>Trigger</span><span>Gulls (air)</span><span>Hounds (ground)</span><span>Pressure</span></div>
+        <div class="wave-row" role="row"><span>Relay 1 · yard</span><span class="w-gull">3</span><span class="w-hound">1</span><span class="w-bar"><i style="width:33%"></i></span></div>
+        <div class="wave-row" role="row"><span>Relay 2 · shed</span><span class="w-gull">3</span><span class="w-hound">2</span><span class="w-bar"><i style="width:58%"></i></span></div>
+        <div class="wave-row" role="row"><span>Relay 3 · quay</span><span class="w-gull">4</span><span class="w-hound">3</span><span class="w-bar"><i style="width:88%"></i></span></div>
+        <div class="wave-row" role="row"><span>Escape pursuit</span><span class="w-gull">+</span><span class="w-hound">+</span><span class="w-bar"><i style="width:100%"></i></span></div>
+      </div>
+      <p class="wave-note">No more than nine machines are alive at once, and after the last relay the net keeps sending pursuit spawns until you board. Keep moving toward the boat rather than clearing every enemy.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="fieldguide">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Field guide</span>
+      <h2>Know the machines and your rifle</h2>
+      <p>The Harbormaster fields two enemy types. Learn how they hunt, and the rifle becomes more than enough.</p>
+    </div>
+
+    <div class="enemy-grid">
+      <div class="enemy-card gull reveal">
+        <div class="enemy-top"><span class="enemy-ico">🛸</span><div><h3>Gulls</h3><span class="enemy-role">Flying drones · ranged</span></div></div>
+        <p>Gulls hover above the yard and fire energy bolts from range (about 7 damage a hit). They are easy to lose behind cover but punish you in the open.</p>
+        <ul class="enemy-list">
+          <li><b>Threat:</b> sustained ranged fire from the air.</li>
+          <li><b>Counter:</b> break line of sight behind containers, then aim up and lead them.</li>
+          <li><b>Tip:</b> their weak point takes extra damage — a short burst drops one.</li>
+        </ul>
+      </div>
+      <div class="enemy-card hound reveal">
+        <div class="enemy-top"><span class="enemy-ico">🐕</span><div><h3>Hounds</h3><span class="enemy-role">Robot dogs · melee rush</span></div></div>
+        <p>Hounds close the distance fast at ground level and tear into you up close. They are the reason you should never stand still while cutting a relay.</p>
+        <ul class="enemy-list">
+          <li><b>Threat:</b> fast ground rushes that surround you.</li>
+          <li><b>Counter:</b> keep backing up, funnel them into open lanes, and use <b>F</b> melee when one gets on top of you.</li>
+          <li><b>Tip:</b> crouch behind steel to break their charge, then re-engage.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="weapon-panel reveal">
+      <div class="weapon-stats">
+        <h3>Your rifle</h3>
+        <div class="wstat"><b>30</b><span>round magazine</span></div>
+        <div class="wstat"><b>120</b><span>reserve rounds</span></div>
+        <div class="wstat"><b>RMB</b><span>aim tightens spread</span></div>
+        <div class="wstat"><b>F</b><span>melee for close Hounds</span></div>
+      </div>
+      <div class="weapon-tips">
+        <h3>Combat discipline</h3>
+        <ul class="enemy-list">
+          <li><b>Aim before you spray.</b> Holding right-click steadies the rifle; hip-fire spreads wide, especially while sprinting.</li>
+          <li><b>Hit weak points.</b> Weak-point hits flash a special marker and deal bonus damage — far more efficient than body spam.</li>
+          <li><b>Manage noise.</b> Gunfire and explosions alert machines within earshot and rally nearby patrols, so don't shoot unless you mean it.</li>
+          <li><b>Reload behind cover.</b> Watch the ammo cue; a dry magazine mid-rush is how runs end.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ratings">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Scoring</span>
+      <h2>Chase the Surgical rating</h2>
+      <p>When you board the boat, the debrief grades your run on three things: how fast you were, how accurate you were, and whether you died. Six ratings are possible.</p>
+    </div>
+
+    <div class="rating-ladder reveal" aria-label="Rating tiers from Messy to Surgical">
+      <div class="rung r0"><span>Messy</span></div>
+      <div class="rung r1"><span>Loud</span></div>
+      <div class="rung r2"><span>Steady</span></div>
+      <div class="rung r3"><span>Clean</span></div>
+      <div class="rung r4"><span>Sharp</span></div>
+      <div class="rung r5"><span>Surgical</span></div>
+    </div>
+
+    <div class="cards rating-cards">
+      <div class="card reveal"><div class="ico">⏱</div><h3>Speed</h3><p>Finishing in under about 4½ minutes scores top marks; under ~6½ minutes is partial. Move with purpose between relays.</p></div>
+      <div class="card reveal"><div class="ico">◎</div><h3>Accuracy</h3><p>50% hits or better is ideal, 30% is partial. Aim down sights and pick weak-point shots instead of holding the trigger.</p></div>
+      <div class="card reveal"><div class="ico">↺</div><h3>No retries</h3><p>Reach the boat without dying for the bonus point. Use cover, keep your health up, and disengage when the vitals bar flashes critical.</p></div>
+    </div>
+    <p class="rating-note reveal">Max all three and the debrief reads <b>Surgical</b>. The run also tracks your time, accuracy, machines destroyed and retries so you can see exactly where to improve.</p>
   </div>
 </section>
 
@@ -209,6 +364,58 @@
         <h3>Play anywhere, unblocked</h3>
         <p>Because the whole game is self-contained web code, it runs from any static host. If claude.ai is blocked on your network, a mirror like this one keeps it playable — no account, no install.</p>
         <p>You can also run it locally: serve the folder and open it in a browser. It is a single HTML file, so it is trivial to host yourself.</p>
+        <p class="disambig"><b>Not the mobile app:</b> this is the AI-built browser FPS, unrelated to the separate "Saltline" lowcountry game on Google Play.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="help">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Help &amp; performance</span>
+      <h2>Fixes and system requirements</h2>
+      <p>Saltline renders a full 3D scene in your browser, so a little tuning goes a long way on modest hardware.</p>
+    </div>
+
+    <div class="help-grid">
+      <div class="help-card reveal">
+        <h3>Stuck on a loading step?</h3>
+        <p>The world is built at load time, so the first start can take several seconds. If it hangs on a step like <b>"Waiting for first light"</b>, your GPU is likely struggling to compile shaders. Lower <b>Graphics quality</b> in Settings, or switch to a recent Chrome, Edge or Firefox with hardware acceleration on.</p>
+      </div>
+      <div class="help-card reveal">
+        <h3>Freezing or stuttering?</h3>
+        <p>Open <b>Settings → Graphics quality</b> and drop from Auto/High to <b>Medium</b> or <b>Low</b>. Quality applies immediately; shadows and reflections may take a moment to rebuild. Closing other GPU-heavy tabs also helps.</p>
+      </div>
+      <div class="help-card reveal">
+        <h3>Mouse won't lock?</h3>
+        <p>Some browsers or iframes block pointer capture. Hold a mouse button and <b>drag to look</b> instead, or turn with the <b>arrow keys</b> / <b>I J K L</b> and fire with <b>Enter</b>. Clicking the stage again re-requests capture.</p>
+      </div>
+      <div class="help-card reveal">
+        <h3>No sound?</h3>
+        <p>Browsers block audio until you interact. Click the stage once to start sound, and check <b>Settings → Master volume</b>. The game also mutes and pauses itself when the tab is hidden.</p>
+      </div>
+    </div>
+
+    <div class="req-panel reveal">
+      <div class="req-col">
+        <h3>What you need</h3>
+        <div class="chips">
+          <span class="chip">Modern browser</span>
+          <span class="chip">WebGL enabled</span>
+          <span class="chip">Hardware acceleration</span>
+          <span class="chip">Mouse, touch or gamepad</span>
+          <span class="chip">No install / no account</span>
+        </div>
+      </div>
+      <div class="req-col">
+        <h3>In-game settings</h3>
+        <ul class="enemy-list">
+          <li><b>Graphics quality:</b> Low / Medium / High / Ultra, or Auto (picked for your device).</li>
+          <li><b>Mouse sensitivity</b> and <b>Invert Y</b> for aim feel.</li>
+          <li><b>Field of view</b> from 60° to 95°.</li>
+          <li><b>Master volume</b> and a <b>Fullscreen</b> toggle. Your choices are saved in the browser.</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -237,11 +444,17 @@
       <h2>Questions, answered</h2>
     </div>
     <div class="faq">
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">What is Saltline?<span class="chev">+</span></button><div class="faq-a"><div class="faq-a-inner">Saltline is a playable first-person shooter that runs entirely in a web browser. It was generated from a single prompt by Anthropic's Claude Fable 5.2 model in about eight hours, with all 3D models, textures and sound produced in code.</div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Is it free? Do I need to download anything?<span class="chev">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes, free, and no download or install. The whole game is a single HTML file of roughly 1.4 MB that you can play directly in a modern desktop browser.</div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">How do I play?<span class="chev">+</span></button><div class="faq-a"><div class="faq-a-inner">Click the stage to capture your mouse. Move with WASD, look with the mouse, left-click to fire, R to reload, E to interact and cut relays, Shift to sprint, Space to jump, Esc to pause. Cut three uplink relays, survive the Gulls and Hounds, then reach the escape boat.</div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Who made it?<span class="chev">+</span></button><div class="faq-a"><div class="faq-a-inner">The run was set up by Felix Rieseberg, an engineer at Anthropic, and shared on X on 2026-11-09. This page hosts a community mirror so the game can be played locally; all credit for the game goes to its original author.</div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Can I play on mobile or if claude.ai is blocked?<span class="chev">+</span></button><div class="faq-a"><div class="faq-a-inner">The game is designed for desktop with mouse and keyboard. Because it is self-contained web code, mirrors like this one let you play even where claude.ai is blocked. Touch controls are limited, so a desktop browser gives the best experience.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">What is Saltline?<span class="chev">+</span></button><div class="faq-a"><div class="faq-a-inner">Saltline is a playable first-person shooter that runs entirely in a web browser. It was generated from a single prompt by Anthropic's Claude Fable 5.2 model in about eight hours, with all 3D models, textures and sound produced in code. You play a lone breacher cutting three uplink relays in a rainy container port.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Is it free? Do I need to download anything?<span class="chev">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes, free, and no download or install. The whole game is a single HTML file of roughly 1.4 MB that you can play directly in a modern browser. Every surface, machine and sound is generated in your browser at load time.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How do I play?<span class="chev">+</span></button><div class="faq-a"><div class="faq-a-inner">Click the stage to capture your mouse. Move with WASD, look with the mouse, left-click to fire, right-click to aim, R to reload, F for melee, Shift to sprint, Space to jump, C to crouch and Esc to pause. Hold E at a relay to cut it. Cut all three uplinks, then reach the escape boat at the quay ladder.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Can I play on a phone or tablet?<span class="chev">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. Saltline has full on-screen touch controls: your left thumb moves, dragging the right side looks, and Fire, Aim, Reload and Jump are on-screen buttons. Hold USE at a relay to cut it, and push the move stick fully forward to sprint. A desktop with mouse and keyboard still gives the most precise aim.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Does it support a controller?<span class="chev">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. With a gamepad the sticks move and look, RT fires, LT aims, A jumps, B crouches, X reloads, Y cuts a relay, L3 sprints and Start pauses. Connect the pad before loading and press a button so the browser detects it.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How long is a run, and where are the relays?<span class="chev">+</span></button><div class="faq-a"><div class="faq-a-inner">A clean run takes roughly four to seven minutes. The three uplink relays are in the yard, the shed and the quay; the compass and on-screen markers point to each one with a distance readout. After all three are cut, the escape boat holds at the quay ladder on the south end.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">What are Gulls and Hounds?<span class="chev">+</span></button><div class="faq-a"><div class="faq-a-inner">They are the port's two machine enemies. Gulls are flying drones that attack from range with energy bolts; Hounds are four-legged robot dogs that rush you at ground level. Both have weak points that take extra damage, and both hunt by line of sight and by the noise of your gunfire.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How do I get the best rating?<span class="chev">+</span></button><div class="faq-a"><div class="faq-a-inner">The debrief grades you from Messy up to Surgical. Your rating combines speed (finishing under about 4.5 minutes scores best), accuracy (50% or higher is ideal) and finishing without retries. Move decisively, aim for weak points, and avoid dying to reach Surgical.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Why is it stuck on loading, or stuttering?<span class="chev">+</span></button><div class="faq-a"><div class="faq-a-inner">The game builds its world in your browser, so the first load can take several seconds on slower devices. If it stalls on a boot step such as "Waiting for first light", your GPU may be struggling to compile shaders. Open Settings and lower Graphics quality, or try a recent Chrome, Edge or Firefox with hardware acceleration enabled.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Who made it, and is this official?<span class="chev">+</span></button><div class="faq-a"><div class="faq-a-inner">The run was set up by Felix Rieseberg, an engineer at Anthropic, and shared on X on 2026-11-09. This page is a community mirror so the game can be played locally; it is not affiliated with or endorsed by Anthropic, and all credit for the game goes to its original author.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Is this the Saltline mobile game on Google Play?<span class="chev">+</span></button><div class="faq-a"><div class="faq-a-inner">No. This is the AI-generated browser FPS by Claude Fable 5.2. It is unrelated to the separate Saltline lowcountry app on Google Play, which is a different product by a different developer.</div></div></div>
     </div>
   </div>
 </section>
@@ -261,7 +474,7 @@
   <div class="container foot-grid">
     <div>
       <div class="foot-links">
-        <a href="#play">Play</a><a href="#how">How to play</a><a href="#about">About</a><a href="#faq">FAQ</a>
+        <a href="#play">Play</a><a href="#how">Controls</a><a href="#guide">Mission guide</a><a href="#fieldguide">Enemies</a><a href="#ratings">Ratings</a><a href="#help">Help</a><a href="#faq">FAQ</a>
         <a href="https://github.com/realcodebear/saltline-fable-5.2" target="_blank" rel="noopener">GitHub mirror</a>
       </div>
       <p class="foot-note">Community mirror for local play. Saltline was created by Felix Rieseberg using Claude Fable 5.2 (Anthropic). Not affiliated with or endorsed by Anthropic. If you are the author and want this taken down, open an issue on the mirror repo. © <span id="year"></span> Saltline mirror.</p>
