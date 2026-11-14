@@ -68,7 +68,7 @@
   var stage = $("#play"), frame = $("#gameFrame"), gate = $("#stageGate");
   var status = $("#stageStatus"), statusText = $("#stageStatusText");
   var loaded = false, started = false;
-  var GAME_SRC = "game/index.html";
+  var GAME_SRC = "game";
 
   function setStatus(text, loading) {
     statusText.textContent = text;
